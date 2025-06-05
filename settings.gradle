@@ -11,4 +11,3 @@ plugins {
 }
 
 rootProject.name = 'freerangetester-framework-selenium-cucumber'
-include('app')
