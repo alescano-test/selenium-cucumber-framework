@@ -8,8 +8,9 @@ public class FreeRangeSteps {
     PrincipalPage landingPage = new PrincipalPage();
 
     @Given("I navigate to www.freerangetesters.com")
-    
+
     public void iNavigateToFreeRangeTesters() {
+        landingPage.maximizeWindow();
         landingPage.navigateToFreeRangeTesters();
     }
 }
