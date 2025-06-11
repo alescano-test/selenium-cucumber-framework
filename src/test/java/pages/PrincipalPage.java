@@ -2,7 +2,8 @@ package pages;
 
 public class PrincipalPage extends BasePage {
 
-    String btnVerPlanDeCarreraIntroQA = "//a[@href='https://www.freerangetesters.com/nivel-inicial-fundamentos-del-testing']";
+    private String hrefNavigationBar = "//a[normalize-space()='%s' and @href]";
+
 
     public PrincipalPage() {
         super(driver);
@@ -11,6 +12,12 @@ public class PrincipalPage extends BasePage {
     // Metodo para navegar a www.frreerangeteter.com
     public void navigateToFreeRangeTesters() {
         navigateTo("https://www.freerangetesters.com");
+    }
+
+    public void clickOnSectionNavigationBar(String section){
+        //Reemplazar el marcador de pocisión $S en hrefNavigationBar con el nombre
+        String xPathSection = String.format(hrefNavigationBar, section);
+        clicElement(xPathSection);
     }
 
 }
